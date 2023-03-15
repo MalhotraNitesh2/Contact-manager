@@ -1,0 +1,45 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <div class="p-h3 fw-bold text-danger">
+                Add Contacts
+            </div>
+            <div class="p-h3">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero sequi voluptas quia eligendi fugit dolores, aut illum perferendis eum, veritatis maxime assumenda accusamus a dolor nobis. Rem porro praesentium reiciendis.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!----Contact form-->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <form (submit)="createSubmit()">
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.name" name="name" type="text" class="form-control" placeholder="Name">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.photo" name="photo" type="text" class="form-control" placeholder="Photo Url">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.email" name="email" type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.mobile" name="mobile" type="number" class="form-control" placeholder="Mobile number">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.company" name="company" type="text" class="form-control" placeholder="Company">
+                </div>
+                <div class="mb-2">
+                    <input [(ngModel)]="contact.Title" name="Title" type="text" class="form-control" placeholder="Title">
+                </div>
+                <button class="btn btn-danger me-2" type="submit"> Create</button>
+                <a class="btn btn-dark" routerLink="/">Cancel </a>
+            </form>
+        </div>
+        <div class="col-sm-4 mt-2">
+            <img [src]="contact.photo">
+        </div>
+    </div>
+</div>
